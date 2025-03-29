@@ -1,0 +1,98 @@
+import { StyleSheet, Text, View } from 'react-native';
+import { Avatar, Icon, Image } from '@rneui/base';
+export default function App() {
+  return (
+    <View style={styles.container}>
+      <View style={{flexDirection: 'row'}}>
+        <Avatar
+        size={64}
+        source={{uri: 'https://i.pravatar.cc/100'}}
+        containerStyle={styles.avatar}
+        rounded
+        />
+        <Avatar
+        size={64}
+        source={{uri: 'https://i.pravatar.cc/101'}}
+        containerStyle={styles.avatar}
+        rounded
+        />
+        <Avatar
+        size={64}
+        source={{uri: 'https://i.pravatar.cc/102'}}
+        containerStyle={styles.avatar}
+        rounded
+        />
+        <Avatar
+        size={64}
+        source={{uri: 'https://i.pravatar.cc/103'}}
+        containerStyle={styles.avatar}
+        rounded
+        />
+        
+      </View>
+      <View style={{flexDirection:'row', justifyContent:'space-between', margin: 16}}>
+        <View style={{flexDirection:'row'}}>
+          <Avatar
+          size={32}
+          source={{uri:'https://i.pravatar.cc/100'}}  
+          rounded
+          />
+          <View style={{flexDirection:'column', marginLeft:8}}>
+            <Text style={styles.username}>cyan.giselle</Text>
+            <Text style={styles.address}>Paris, Francia</Text>
+          </View>
+        </View>
+        <Icon type="material-community" name="dots-vertical" size={18} />
+      </View>
+      <Image source={{uri:"https://placehold.co/600x300/png"}}
+      style={{width: '100%', height: 300}}
+      />
+
+      <View style={{flexDirection: "row", justifyContent: "space-between", margin:16}}>
+        <View style={{flexDirection:"row"}}>
+        <Icon type="material-community" name="heart" size={24} color="red"/>
+        <Icon type="material-community" name="comment-outline" size={24} style={{marginHorizontal: 8}}/>
+        <Icon type="material-community" name="share-outline" size={24}/>
+        </View>
+        <Icon type="material-community" name="dots-horizontal" size={24}/>
+        <Icon type="material-community" name="bookmark-outline" size={24}/>
+      </View>
+      <View style={{flexDirection:"row", marginHorizontal:16}}>
+        <Avatar
+        size={20}
+        source={{uri: "https://i.pravatar.cc/110"}}
+        rounded
+        />
+        <View style={{justifyContent: 'center'}}>
+        <Text style={{ marginLeft: 8, fontSize: 12}}>
+          Liked by kim.gp and others
+        </Text>
+        </View>
+        
+      </View>
+      <View style={{marginHorizontal: 16}}>
+      <Text>kim.gp Lindaaaa </Text>
+      <Text style={styles.address}>24 de Enero del 2024</Text>
+      </View>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    marginTop:48
+  },
+  avatar:{
+    marginHorizontal: 8
+  },
+  username: {
+    fontSize: 12,
+    fontWeight: 'bold',
+  },
+  address:{
+    fontSize: 10,
+    color: 'gray'
+  }
+});
